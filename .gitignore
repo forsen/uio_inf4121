@@ -1,0 +1,5 @@
+out/
+.idea/
+Hangman.iml
+players.ser
+.DS_Store
