@@ -2,13 +2,9 @@ package hangman;
 
 public class HangmanTets {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        Game myGame = new Game(false);
 
-		Game myGame = new Game(false);
-
-		myGame.displayMenu();
-
-		
-	}
-
+        myGame.displayMenu();
+    }
 }

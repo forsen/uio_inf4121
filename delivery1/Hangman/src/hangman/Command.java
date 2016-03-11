@@ -1,6 +1,5 @@
 package hangman;
 
 public enum Command {
-	restart, top, exit, help;
-
+    restart, top, exit, help;
 }
