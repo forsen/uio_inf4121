@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.avactis.com/" />
+<title>Test 15</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test 15</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeText</td>
+	<td>css=strong.shopping-total-price.price</td>
+	<td>currentCurrencySubtotal</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseInt(storedVars['currentCurrencySubtotal'].replace('$','').replace(',',''),10)</td>
+	<td>currentSubtotal</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=quantity_in_cart[0]</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=td.goods-page-total &gt; strong</td>
+	<td>currencyTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=td.goods-page-price &gt; strong</td>
+	<td>currencyPrice</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat(storedVars['currencyTotal'].replace('$','').replace(',',''), 10)</td>
+	<td>total</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat(storedVars['currencyPrice'].replace('$','').replace(',',''),10)</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['total'] == storedVars['price']</td>
+	<td>true</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=strong.shopping-total-price.price</td>
+	<td>newCurrencySubtotal</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>parseFloat(storedVars['newCurrencySubtotal'].replace('$','').replace(',',''),10)</td>
+	<td>newSubTotal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${newSubTotal} ${currentSubtotal} ${price}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>storedVars['newSubTotal'] == storedVars['currentSubtotal'] - (29 * storedVars['price'])</td>
+	<td>true</td>
+</tr>
+</tbody></table>
+</body>
+</html>

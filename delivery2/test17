@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.avactis.com/" />
+<title>Test 17</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test 17</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/4.7.9/index.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=My cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.form-group &gt; a.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.form-group &gt; a.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>name=billingInfo[Firstname]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Firstname]</td>
+	<td>Erik Haider</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Lastname]</td>
+	<td>Forsen</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing-info-input_country_select</td>
+	<td>label=France</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Postcode]</td>
+	<td>01234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Phone]</td>
+	<td>12345677</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=checkbox_shipping_same_as_billing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Continue Checkout']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=step_1_errors</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=step_1_errors</td>
+	<td>1. Field 'City' in form 'Billing Information' is required.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
