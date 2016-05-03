@@ -4,53 +4,69 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://demo.avactis.com/" />
-<title>Test 8</title>
+<title>Test 2</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Test 8</td></tr>
+<tr><td rowspan="1" colspan="3">Test 2</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>/4.7.9/home.php</td>
+	<td>/4.7.9/index.php</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Change Password</td>
+	<td>link=Sign In</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=account_change_password_form_current_password_id</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>name=customer_info[Customer][Email]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=account_change_password_form_current_password_id</td>
-	<td>aoeu</td>
+	<td>name=customer_info[Customer][Email]</td>
+	<td>tull@ball.no</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=account_change_password_form_new_password_id</td>
-	<td>apassword</td>
+	<td>name=customer_info[Customer][Password]</td>
+	<td>pass</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=account_change_password_form_retype_password_id</td>
-	<td>adifferentpassword</td>
+	<td>name=customer_info[Customer][RePassword]</td>
+	<td>pass</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//input[@value='Continue']</td>
+	<td>//input[@value='Register']</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
+	<td>waitForVisible</td>
 	<td>css=div.note.note-danger</td>
 	<td></td>
 </tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.note.note-danger</td>
+	<td>This account name is already taken. Please choose a different account name.</td>
+</tr>
+
 </tbody></table>
 </body>
 </html>

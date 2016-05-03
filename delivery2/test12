@@ -23,7 +23,7 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>css=div.product_list_items.empty.content-page</td>
+	<td>css=div.product_list_items</td>
 	<td></td>
 </tr>
 <tr>
@@ -31,7 +31,6 @@
 	<td>id=checkout_1</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

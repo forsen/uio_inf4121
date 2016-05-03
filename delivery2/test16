@@ -33,7 +33,7 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=checkout_1</td>
+	<td>name=billingInfo[Firstname]</td>
 	<td></td>
 </tr>
 <tr>

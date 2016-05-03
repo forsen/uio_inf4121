@@ -57,6 +57,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>30*${price}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyEval</td>
 	<td>storedVars['total'] == 30*storedVars['price']</td>
 	<td>true</td>
